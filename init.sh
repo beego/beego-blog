@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-go get github.com/beego/bee@4637afa
+go get github.com/beego/bee
 bee new beeblog
 mkdir beeblog/ant
 

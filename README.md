@@ -13,7 +13,7 @@
 * docker exec -it beegopro /bin/bash
 
 ## 初始化工作
-* ./gen.sh
+* ./init.sh
 * cd /root/beeblog/ant && yarn create umi
 * npm i
 

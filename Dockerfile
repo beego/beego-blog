@@ -4,6 +4,10 @@ WORKDIR /root
 
 ADD beegopro/ /root/beegopro/
 ADD beegopro/.bashrc /root/
+
+ADD ./init.sh /root/
+ADD ./cp_config.sh /root/
+
 RUN source ~/.bashrc
 RUN export GO111MODULE=on
 #RUN curl --silent --location https://rpm.nodesource.com/setup_10.x | bash
@@ -13,7 +17,7 @@ RUN npm config set registry https://registry.npm.taobao.org --global
 RUN npm install -g yarn
 RUN yum install -y go
 RUN source ~/.bashrc
-#RUN go get github.com/beego/bee@4637afa
+
 
 EXPOSE 8080 8000
 
