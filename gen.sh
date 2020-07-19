@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 go get github.com/beego/bee@4637afa
 bee new beeblog
+mkdir beeblog/ant
 
 cat > /root/beeblog/beegopro.toml <<TEXT
-dsn = "root:@tcp(mysql:3306)/beeblog"
+dsn = "root:beego@tcp(mysql:3306)/beeblog"
 proType = "ant4"
 [models.blog]
     names = ["name","content","created_at","updated_at"]
@@ -13,3 +14,5 @@ proType = "ant4"
     beego =  "."
     ant  = "./ant/src/pages"
 TEXT
+
+
